@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>🪐✨ Feliz 1ro de Agosto ✨🪐</title>
+
+
+<!-- THREE.JS IMPORTMAP -->
+<script type="importmap">
+{
+  "imports": {
+
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+
+  }
+}
+</script>
+
+
+
+<style>
+
+body {
+
+    margin:0;
+
+    overflow:hidden;
+
+    background:black;
+
+}
+
+
+
+canvas {
+
+    display:block;
+
+}
+
+
+
+.titulo {
+
+
+    position:absolute;
+
+    top:40px;
+
+    width:100%;
+
+
+    text-align:center;
+
+
+    font-family:Arial,sans-serif;
+
+    font-size:55px;
+
+    font-weight:900;
+
+
+    color:white;
+
+
+    text-shadow:
+
+    0 0 10px #ff69b4,
+
+    0 0 20px #9b59ff,
+
+    0 0 40px #00ffff;
+
+
+    animation:brillo 2s infinite alternate;
+
+
+    z-index:10;
+
+    pointer-events:none;
+
+}
+
+
+
+
+@keyframes brillo {
+
+
+from {
+
+transform:scale(1);
+
+opacity:0.8;
+
+}
+
+
+
+to {
+
+transform:scale(1.08);
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+
+.subtitulo {
+
+
+    position:absolute;
+
+
+    top:120px;
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+    color:#ffd6f7;
+
+
+    font-size:22px;
+
+
+    font-family:Arial;
+
+
+    letter-spacing:3px;
+
+
+    animation:flotar 3s infinite alternate;
+
+
+    z-index:10;
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+
+
+@keyframes flotar {
+
+
+from {
+
+transform:translateY(0px);
+
+}
+
+
+
+to {
+
+transform:translateY(15px);
+
+}
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="titulo">
+
+🪐✨ Feliz 1ro de Agosto ✨🪐
+
+</div>
+
+
+
+
+<div class="subtitulo">
+
+Te amo mucho mi Princesa Xiomara 💜
+
+</div>
+
+
+
+
+
+<script type="module" src="./script.js"></script>
+
+
+
+</body>
+
+
+</html>
