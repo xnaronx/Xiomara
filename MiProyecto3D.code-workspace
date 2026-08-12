@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../tienda"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "tienda"
+	}
+}
