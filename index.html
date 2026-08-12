@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,58 +6,43 @@
 
 <meta charset="UTF-8">
 
-<title>🪐✨ Feliz 1ro de Agosto ✨🪐</title>
+<title>💜 Feliz aniversario amor 💜</title>
 
 
-<!-- THREE.JS IMPORTMAP -->
 <script type="importmap">
 {
   "imports": {
-
     "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-
     "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-
   }
 }
 </script>
 
 
-
 <style>
 
-body {
-
+body{
     margin:0;
-
     overflow:hidden;
-
     background:black;
-
 }
 
 
-
-canvas {
-
+canvas{
     display:block;
-
 }
 
 
 
-.titulo {
+/* TITULO */
 
+.titulo{
 
     position:absolute;
-
     top:40px;
-
     width:100%;
 
-
     text-align:center;
-
 
     font-family:Arial,sans-serif;
 
@@ -64,21 +50,16 @@ canvas {
 
     font-weight:900;
 
-
     color:white;
 
 
     text-shadow:
-
     0 0 10px #ff69b4,
-
     0 0 20px #9b59ff,
-
     0 0 40px #00ffff;
 
 
     animation:brillo 2s infinite alternate;
-
 
     z-index:10;
 
@@ -87,44 +68,30 @@ canvas {
 }
 
 
+@keyframes brillo{
 
-
-@keyframes brillo {
-
-
-from {
-
+from{
 transform:scale(1);
-
-opacity:0.8;
-
+opacity:.8;
 }
 
-
-
-to {
-
+to{
 transform:scale(1.08);
-
 opacity:1;
+}
 
 }
 
 
-}
+
+/* DESCRIPCION */
 
 
-
-
-
-.subtitulo {
-
+.subtitulo{
 
     position:absolute;
 
-
     top:120px;
-
 
     width:100%;
 
@@ -135,13 +102,13 @@ opacity:1;
     color:#ffd6f7;
 
 
-    font-size:22px;
+    font-size:25px;
 
 
     font-family:Arial;
 
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
 
     animation:flotar 3s infinite alternate;
@@ -149,36 +116,186 @@ opacity:1;
 
     z-index:10;
 
-
     pointer-events:none;
 
-
 }
 
 
 
+@keyframes flotar{
 
-
-@keyframes flotar {
-
-
-from {
-
-transform:translateY(0px);
-
+from{
+transform:translateY(0);
 }
 
-
-
-to {
-
+to{
 transform:translateY(15px);
+}
 
 }
 
 
+
+/* PANEL */
+
+#photoPanel{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+
+transform:
+
+translate(-50%,-50%)
+
+scale(0);
+
+
+
+width:420px;
+
+
+padding:25px;
+
+
+
+background:
+
+rgba(0,0,30,.88);
+
+
+
+border-radius:30px;
+
+
+
+box-shadow:
+
+0 0 30px #ff4fd8,
+
+0 0 60px #9b59ff;
+
+
+
+text-align:center;
+
+
+
+color:white;
+
+
+font-family:Arial;
+
+
+z-index:30;
+
+
+transition:.5s;
+
+
+backdrop-filter:blur(10px);
+
 }
 
+
+
+#photoPanel.active{
+
+transform:
+
+translate(-50%,-50%)
+
+scale(1);
+
+}
+
+
+
+/* FOTO ABIERTA */
+
+
+#bigPhoto{
+
+width:280px;
+
+height:280px;
+
+
+object-fit:cover;
+
+
+border-radius:50%;
+
+
+border:8px solid #ff4fd8;
+
+
+
+box-shadow:
+
+0 0 20px #ff4fd8,
+
+0 0 40px #9b59ff;
+
+
+}
+
+
+
+/* TITULO DEL RECUERDO */
+
+
+#photoTitle{
+
+font-size:30px;
+
+color:#ffd6f7;
+
+margin:15px;
+
+}
+
+
+
+/* MENSAJE */
+
+
+#photoMessage{
+
+font-size:18px;
+
+line-height:1.5;
+
+color:white;
+
+}
+
+
+
+/* CERRAR */
+
+
+#closePanel{
+
+position:absolute;
+
+right:20px;
+
+top:15px;
+
+
+font-size:25px;
+
+
+cursor:pointer;
+
+
+color:white;
+
+}
 
 
 </style>
@@ -187,27 +304,71 @@ transform:translateY(15px);
 </head>
 
 
-
 <body>
 
 
 
 <div class="titulo">
 
-🪐✨ Feliz 1ro de Agosto ✨🪐
+💜 Feliz aniversario amor 💜
 
 </div>
-
 
 
 
 <div class="subtitulo">
 
-Te amo mucho mi Princesa Xiomara 💜
+11 - 05 ❤️
 
 </div>
 
 
+
+
+
+<!-- PANEL DE RECUERDOS -->
+
+
+<div id="photoPanel">
+
+
+<div id="closePanel">
+
+✖
+
+</div>
+
+
+<img id="bigPhoto" src="./fotos/foto01.jpg">
+
+
+
+<h2 id="photoTitle">
+
+Nuestro recuerdo 💜
+
+</h2>
+
+
+
+<p id="photoMessage">
+
+Cada momento contigo es una estrella más en mi universo ✨
+
+</p>
+
+
+</div>
+
+
+
+
+
+<audio id="bgm" autoplay loop>
+
+<source src="./audio/musica.mp3" type="audio/mpeg">
+
+</audio>
 
 
 
@@ -217,5 +378,5 @@ Te amo mucho mi Princesa Xiomara 💜
 
 </body>
 
-
 </html>
+```

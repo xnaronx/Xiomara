@@ -539,22 +539,32 @@ heartPositions,
 
 
 
+// ===============================
+// ✨ TEXTURA DEL CORAZÓN
+// ===============================
+
+const heartTexture = new THREE.TextureLoader().load(
+    "https://threejs.org/examples/textures/sprites/spark1.png"
+);
+
+
 const heartMaterial = new THREE.PointsMaterial({
 
-color:0xff66dd,
+    color:0xff4fd8,
 
-size:0.045,
+    size:0.12,
 
-transparent:true,
+    map:heartTexture,
 
-opacity:0.95,
+    transparent:true,
 
-blending:
+    opacity:0.9,
 
-THREE.AdditiveBlending
+    blending:THREE.AdditiveBlending,
+
+    depthWrite:false
 
 });
-
 
 
 
@@ -753,33 +763,32 @@ const texture = loader.load(
 );
 
 
+const planetMaterial = new THREE.MeshBasicMaterial({
 
+    map:texture,
+
+    transparent:true,
+
+    side:THREE.DoubleSide,
+
+    toneMapped:false
+
+});
 
 
 const planet = new THREE.Mesh(
 
-new THREE.CircleGeometry(
+    new THREE.CircleGeometry(
 
-2.1,
+        2.1,
 
-64
+        128
 
-),
+    ),
 
-
-new THREE.MeshBasicMaterial({
-
-map:texture,
-
-transparent:true,
-
-side:THREE.DoubleSide
-
-})
+    planetMaterial
 
 );
-
-
 
 let angle =
 
