@@ -1067,7 +1067,7 @@ message:"La distancia es una tortura porque te tengo unas ganas treméndas. Dese
 },
 
 {
-title:"Mi madura hermosa ✨",
+title:"Mi reina hermosa ✨",
 message:"Me fascina que seas mayor que yo, me encantas en todos los sentidos. Eres esa mujer increíble que se robó mi corazón por completo.<br><br>#11/05"
 },
 
